@@ -155,6 +155,10 @@ def customer_query():
     query = db.session.query(Customers).all()
     return query
 
+def customer_query_id():
+    query = db.session.query(Customers.id).all()
+    return query
+
 
 def my_customer_query():
     query = db.session.query(Customers.administrators).all()

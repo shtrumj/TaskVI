@@ -23,7 +23,8 @@
                         <div class="form-outline sm-3 text-center dropdown p-3 mb-2 bg-primary text-dark" style="vertical-align: top; border-radius: 15px;">
                             {{ myform.mycustomer.label(class_="form-label")}}
                             </br>
-                            {{ myform.mycustomer(onchange="myfunc()")}}
+                            {{ myform.mycustomer(onchange="myfunc()", class_="form-control", data="test")}}
+{#                            {{ myform.mycustomer( myform.mycustomer(**{"onchange":"myfunc()"}))}}#}
                         </div>
                         </div>
                         <div class="name"></div>
@@ -74,7 +75,7 @@
                             </br>
                             {{ form.owaadd(class_="form-control form-group-lg input-group-lg") }}
                         </div>
-                        <input name="cid" id="cid" "> {{ customer.id }} </input>
+                        <input name="cid" id="cid"> {{ customer.id }} </input>
                         <br>
                         <select class="form-outline sm-3 form-control" multiple aria-label="multiple select example" name="sysadmins" id="sysadmins">
                           <option selected>מנהלי רשת</option>

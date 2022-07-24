@@ -1,8 +1,8 @@
 from flask_wtf import FlaskForm
-from wtforms import SubmitField, StringField, PasswordField, EmailField, DateField, SelectField, TextAreaField,IntegerField, SelectMultipleField
+from wtforms import SubmitField, StringField, PasswordField, EmailField, DateField, SelectField, TextAreaField,IntegerField, SelectMultipleField, HiddenField
 from wtforms.validators import DataRequired, length, EqualTo, Email
 from wtforms_sqlalchemy.fields import QuerySelectField
-from taskManager.models import customer_query, employees_names_query, bosses_names_query,my_customer_query
+from taskManager.models import customer_query, employees_names_query, bosses_names_query,customer_query_id
 import taskManager.routes
 # from taskManager.models import Employees
 
@@ -98,4 +98,4 @@ class InfraView(FlaskForm):
 
 
 class Mycustomersform(FlaskForm):
-    mycustomer = QuerySelectField('בחרו לקוח', query_factory=customer_query, allow_blank=True)
+    mycustomer = QuerySelectField('בחרו לקוח', query_factory=customer_query, allow_blank=True, get_label='name',blank_text="נא לבחור לקוח")
