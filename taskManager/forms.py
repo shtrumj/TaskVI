@@ -6,6 +6,7 @@ from taskManager.models import customer_query, employees_names_query, bosses_nam
 import taskManager.routes
 # from taskManager.models import Employees
 
+
 class Loginform(FlaskForm):
     email = StringField("כתובת דואר אלקטרוני", validators=[DataRequired(), Email()])
     password = PasswordField('סיסמא', validators=[DataRequired()])
